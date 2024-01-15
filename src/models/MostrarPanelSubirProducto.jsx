@@ -28,7 +28,7 @@ export const MostrarPanelSubirProducto = ({
          formData.append("descripcion", descripcion);
          formData.append("precio", precio);
         
-        const response = await fetch(`https://backendtiomanualidades.onrender.com/addImg`, {
+        const response = await fetch(`https://backettiomanualidades.onrender.com/addImg`, {
           method: "POST",
           body: formData,
         });
