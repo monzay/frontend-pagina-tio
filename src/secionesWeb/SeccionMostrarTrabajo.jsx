@@ -102,8 +102,9 @@ export const SeccionMostrarTrabajo = () => {
   useEffect(() => {
     const llamarImg = async () => {
       try {
-        const response = await fetch("https://backendtiomanualidades.onrender.com/imgs",{
+        const response = await fetch("https://backettiomanualidades.onrender.com/imgs",{
           method: "GET",
+          mode:"cors",
           headers: {
             "Content-Type": "application/json",
           },
@@ -122,7 +123,7 @@ export const SeccionMostrarTrabajo = () => {
 
   const eliminarProducto = async (id) => {
     try {
-      const response = await fetch(`https://backendtiomanualidades.onrender.com/deleteImg/${id}`, {
+      const response = await fetch(`https://backettiomanualidades.onrender.com/deleteImg/${id}`, {
         method: "DELETE",
       });
       const res = await response.json();
@@ -192,7 +193,7 @@ export const SeccionMostrarTrabajo = () => {
                     setIdProductoMostrar(img.id);
                     setMostrarInformacion(true);
                   }}
-                  src={`https://backendtiomanualidades.onrender.com/uploads/${img.img}`}
+                  src={`https://backettiomanualidades.onrender.com/uploads/${img.img}`}
                   alt="slide_image"
                 />
                 <div className="contenedor-btns">
@@ -230,7 +231,7 @@ export const SeccionMostrarTrabajo = () => {
         imgServer.map((producto) =>
           producto.id == idProductoMostrar ? (
             <div className="contendor-informacio-producto">
-              <img  className="informacion-producto-img" src={`https://backendtiomanualidades.onrender.com/uploads/${producto.img}`}  alt="" />
+              <img  className="informacion-producto-img" src={`https://backettiomanualidades.onrender.com/uploads/${producto.img}`}  alt="" />
               <div className="informacion-producto-texto">
                 <h5 className="informacion-producto-categoria">categoria:{producto.categoria}</h5>
                 <span className="informacion-producto-precio">precio: {producto.precio}</span>

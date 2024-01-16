@@ -22,7 +22,7 @@ export const MostrarPanelEditar = ({id,setMostraPanelEditarProducto,setSeActuali
               formData.append("categoria", editarCategoria);
              formData.append("descripcion", editarDescripcion);
              formData.append("precio", precio);
-            const response = await fetch(`https://backendtiomanualidades.onrender.com/actualizarImg/${id}`,{
+            const response = await fetch(`https://backettiomanualidades.onrender.com/actualizarImg/${id}`,{
               method: "PUT",
               body: formData,
             });
